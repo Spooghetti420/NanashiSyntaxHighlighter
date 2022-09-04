@@ -6,14 +6,41 @@
 			"include": "#keywords"
 		},
 		{
+			"include": "#keywordscontrol"
+		},
+		{
 			"include": "#strings"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#booleans"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#identifiers"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#blockcomments"
 		}
 	],
 	"repository": {
-		"keywords": {
+		"keywordscontrol": {
 			"patterns": [{
 				"name": "keyword.control.nanashi",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(if|while|for|return|from|to|in|do|else|until|unless)\\b"
+			}]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.other",
+				"match": "\\b(fn|let)\\b"
 			}]
 		},
 		"strings": {
@@ -26,6 +53,53 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"numbers": {
+			"name": "constant.numeric.nanashi",
+			"patterns": [
+				{
+					"name": "constant.numeric.nanashi",
+					"match": "\\d?(?:\\.?\\d+)"
+				}
+			]
+		},
+		"booleans": {
+			"name": "keyword.other",
+			"patterns": [
+				{
+					"name": "keyword.other",
+					"match": "(true|false)"
+				}
+			]
+		},
+		"identifiers": {
+			"name": "variable",
+			"patterns": [
+				{
+					"name": "variable",
+					"match": "\\b[A-z]\\w*?\\b"
+				}
+			]
+		},
+		"constants": {
+			"name": "constant.numeric",
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\b[A-Z][A-Z_]*?\\b"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment",
+				"match": "\\/\\/[^\\n]*"
+			}]
+		},
+		"blockcomments": {
+			"name": "comment.block",
+			"begin": "/\\*",
+			"end": "\\*/"
 		}
 	},
 	"scopeName": "source.nanashi"
