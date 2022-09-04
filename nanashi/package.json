@@ -1,0 +1,25 @@
+{
+  "name": "nanashi",
+  "displayName": "Nanashi",
+  "description": "Nanashi language syntax highlighting",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "nanashi",
+      "aliases": ["Nanashi", "nanashi"],
+      "extensions": [".78",".ns",".nana"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "nanashi",
+      "scopeName": "source.nanashi",
+      "path": "./syntaxes/nanashi.tmLanguage.json"
+    }]
+  }
+}
