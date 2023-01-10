@@ -34,13 +34,13 @@
 		"keywordscontrol": {
 			"patterns": [{
 				"name": "keyword.control.nanashi",
-				"match": "\\b(if|while|for|return|from|to|in|do|else|until|unless)\\b"
+				"match": "\\b(if|while|for|return|from|to|step|do|else|until|unless)\\b"
 			}]
 		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.other",
-				"match": "\\b(fn|let)\\b"
+				"match": "\\b(fn|let|enum|class)\\b"
 			}]
 		},
 		"strings": {
@@ -68,7 +68,7 @@
 			"patterns": [
 				{
 					"name": "keyword.other",
-					"match": "(true|false)"
+					"match": "(true|false|bool|int|float|print)"
 				}
 			]
 		},
@@ -93,7 +93,7 @@
 		"comments": {
 			"patterns": [{
 				"name": "comment",
-				"match": "\\/\\/[^\\n]*"
+				"match": "#[^\\n]*"
 			}]
 		},
 		"blockcomments": {
